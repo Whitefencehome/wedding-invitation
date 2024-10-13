@@ -1,0 +1,140 @@
+#description-page {
+  height: 350vh;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 240px;
+}
+
+#description-page p {
+  display: inline-block;
+  margin: 0;
+  /* margin-bottom: 60px; */
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 12px 12px 12px 32px;
+  box-sizing: border-box;
+  max-width: 410px;
+}
+
+/* #description-page p::first-line {
+  font-family: monospace;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8), 0px -1px 0px rgba(0, 0, 0, .7);
+} */
+
+#description-page .text-container {
+  position: sticky;
+  top: 240px;
+  text-align: right;
+  line-height: 2.8;
+  white-space: nowrap;
+  margin: 0 0 0 auto;
+  letter-spacing: .15em;
+  overflow: hidden;
+  margin-bottom: 240px;
+}
+
+#description-page .cursor {
+  display: inline-block;
+  border-right: 0.15em solid orange;
+  height: 24px;
+  animation: blink-caret .5s step-end infinite;
+  position: relative;
+  bottom: -5px;
+}
+
+#description-page .footer {
+  opacity: 0;
+  transition: 1.5s opacity;
+  padding-right: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-left: calc(100% - 410px);
+}
+
+#description-page .footer.active {
+  opacity: 1;
+}
+
+#description-page .bottom-background {
+  background-image: url(../album/001.jpg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  height: 100lvh;
+  bottom: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: opacity(0.7);
+  opacity: 0;
+}
+
+@media screen and (max-width: 980px) {
+  #description-page p {
+    background-color: transparent;
+    padding: 0;
+    padding-right: 12px;
+  }
+
+  #description-page .footer {
+    background-color: transparent;
+  }
+
+  #description-page .text-container {
+    background-color: rgb(255 255 255 / 70%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #description-page .bottom-background {
+    transition: opacity 1.5s ease;
+  }
+}
+
+#description-page .bottom-background.active {
+  opacity: 1.0;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
+}
+
+#description-page .arrow-down {
+  position: sticky;
+  top: calc(100vh - 60px);
+  left: calc(50% - 30px);
+  margin-bottom: 10px;
+  background-image: url(../img/arrow-down.svg);
+  width: 60px;
+  height: 35px;
+  z-index: 1;
+  background-size: contain;
+  animation: arrow-down 1s linear infinite alternate;
+}
+
+@keyframes arrow-down {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}

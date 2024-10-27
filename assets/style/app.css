@@ -2,7 +2,7 @@ html {
     /* background-color: #e8e0cf; */
     background-color: #fff;
     background-image: url(../img/blizzard.png);
-    font-family: 'Noto Serif KR', serif;
+    font-family: "Noto Serif KR", serif;
     font-size: 16px;
     user-select: none;
 }
@@ -21,12 +21,12 @@ h4,
 h5,
 h6,
 p {
-    font-family: 'Noto Serif KR', serif;
+    font-family: "Noto Serif KR", serif;
 }
 
 a,
 a:visited {
-    font-family: 'Noto Serif KR', serif;
+    font-family: "Noto Serif KR", serif;
     color: rgb(83, 71, 65);
 }
 
@@ -37,8 +37,10 @@ main {
 }
 
 .page-title {
-    font-family: 'Pacifico', cursive;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8), 0px -1px 0px rgba(252, 221, 221, .7);
+    font-family: "Pacifico", cursive;
+    text-shadow:
+        0px 1px 0px rgba(255, 255, 255, 0.8),
+        0px -1px 0px rgba(252, 221, 221, 0.7);
     display: block;
     margin-bottom: 24px;
 }
@@ -124,6 +126,11 @@ main {
     font-size: 1rem;
 }
 
+#date-page .date-title {
+    display: inline-block;
+    margin-bottom: 72px;
+}
+
 #date-page .en-date {
     font-size: 0.9rem;
     letter-spacing: 0.01rem;
@@ -133,7 +140,10 @@ main {
     line-height: 2.5;
     font-weight: 400;
     font-size: 1.16rem;
-    margin-bottom: 72px;
+}
+
+#date-page .add-description {
+    font-size: 0.8rem;
 }
 
 #date-page h4 {
@@ -185,7 +195,9 @@ main {
 
 @media (prefers-reduced-motion: no-preference) {
     #date-page .calendar td {
-        transition: opacity 1s ease, transform 1s ease;
+        transition:
+            opacity 1s ease,
+            transform 1s ease;
     }
 
     #date-page .calendar td:nth-child(1) {
@@ -233,13 +245,21 @@ main {
     display: none;
 }
 
-#venue-page .root_daum_roughmap .map>div:first-child>div>div:last-child img {
+#venue-page
+    .root_daum_roughmap
+    .map
+    > div:first-child
+    > div
+    > div:last-child
+    img {
     filter: hue-rotate(192deg);
 }
 
 @media (prefers-reduced-motion: no-preference) {
     #venue-page .root_daum_roughmap {
-        transition: opacity 1.5s ease, transform 1.5s ease;
+        transition:
+            opacity 1.5s ease,
+            transform 1.5s ease;
     }
 }
 
@@ -363,7 +383,7 @@ main {
 
 .account-description .account.active {
     height: 100px;
-    opacity: 1.0;
+    opacity: 1;
 }
 
 #groom-account {
